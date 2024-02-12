@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('id_info');
             $table->string('img_info');
             $table->string('title_info');
-            $table->string('desc_info');
+            $table->string('desc_info', 9999);
             $table->string('slug_info');
             $table->string('tag_info')->default(null);
             $table->timestamps();
