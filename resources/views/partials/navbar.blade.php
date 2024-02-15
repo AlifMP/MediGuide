@@ -5,6 +5,7 @@
         <li><a href="/" class="active">Beranda</a></li>
         <li><a href="/blogs">Info Kesehatan</a></li>
         <li><a href="/chat">Chat Dokter</a></li>
-        <li><a href="/login">Masuk / Daftar</a></li>
     </ul>
+
+    <li><a href="/login" class="btn-login">Masuk / Daftar</a></li>
 </header>

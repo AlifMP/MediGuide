@@ -17,3 +17,59 @@
     --h2-font: 3rem;
     --p-font: 1.1rem;
 }
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    align-items: center;
+    padding: 27px 15%;
+    border-bottom: 1px solid #00000036;
+    transition: all 0.65s ease;
+}
+.navlist {
+    display: flex;
+}
+.navlist a {
+    color: var(--blue-dark);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 25px;
+    position: relative;
+    transition: all 0.45s ease;
+}
+.navlist a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 3px;
+    background-color: var(--blue);
+    transition: width 0.45s ease;
+}
+.navlist a:hover {
+    color: var(--blue);
+}
+.navlist a:hover::after {
+    width: 100%;
+}
+.btn-login {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 13px;
+    background-color: var(--blue);
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid var(--blue);
+    outline: none;
+    transition: all 0.45s ease;
+}
+.btn-login:hover {
+    background-color: var(--faded-blue);
+    color: var(--blue-dark);
+}
