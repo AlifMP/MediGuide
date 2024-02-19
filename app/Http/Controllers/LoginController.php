@@ -9,8 +9,8 @@ class LoginController extends Controller
 {
     public function indexLog()
     {
-        return view('sign.login', [
-            "title" => "Login"
+        return view('dashboard.login', [
+            "title" => "Masuk"
         ]);
     }
 

@@ -14,9 +14,12 @@
     --blue: #0044ff;
     --faded-blue: #99b4ff;
     --big-font: 5rem;
-    --h1-font: 2.3rem;
-    --h2-font: 3rem;
+    --h1-font: 2rem;
+    --h2-font: 1.5rem;
     --p-font: 1.1rem;
+}
+body {
+    background-color: #ddd;
 }
 header {
     position: fixed;
@@ -33,7 +36,7 @@ header {
     transition: all 0.65s ease;
 }
 header .logo-medic img {
-    width: 185px;
+    width: 230px;
 }
 .navlist {
     display: flex;
@@ -80,16 +83,16 @@ header .logo-medic img {
 span {
     color: var(--blue-dark);
 }
-section {
+/* section {
     padding: 160px 15% 50px;
 }
 .home {
     position: relative;
     height: 80vh;
     width: 100%;
-    /* background-image: url(images/bg2.png);
+    background-image: url(images/bg2.png);
     background-size: cover;
-    background-position: center; */
+    background-position: center;
     background-color: #ccc;
     display: flex;
     align-items: end;
@@ -101,4 +104,52 @@ section {
     list-style: 1.1;
     margin: 0 0 8px;
     width: 80%;
+} */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+section .form-content {
+    padding: 2px;
+}
+section .form-content .title {
+    font-size: var(--h1-font);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5px;
+}
+section .form-content .inputan {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+section .form-content .inputan input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-top: 1px;
+    height: 40px;
+    padding: 8px;
+}
+section .form-content button {
+    width: 100%;
+    margin-top: 10px;
+    outline: none;
+    height: 40px;
+    border: 1px solid var(--blue);
+    transition: all 0.45s ease;
+    color: #fff;
+    background-color: var(--blue);
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+section .form-content button:hover {
+    background-color: var(--faded-blue);
+    color: #000;
 }

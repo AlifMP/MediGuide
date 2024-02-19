@@ -12,7 +12,13 @@ class DashboardController extends Controller
     public function home()
     {
         return view('dashboard.home', [
-            'title' => 'Home',
+            'title' => 'MediGuide',
+        ]);
+    }
+    public function admindashboard()
+    {
+        return view('dashboard.adminhome', [
+            'title' => 'MediGuide - Admin',
         ]);
     }
 }

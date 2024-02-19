@@ -10,22 +10,22 @@ class RegisterController extends Controller
 {
     public function indexReg()
     {
-        return view('sign.register', [
-            "title" => "Register"
+        return view('dashboard.register', [
+            "title" => "Daftar"
         ]);
     }
 
     public function prosesReg(Request $request)
     {
         $validated = $request->validate([
-            "username" => ["required", "unique:users"],
+            "name" => ["required", "unique:users"],
             "email" => ["required", "email:dns"],
             "password" => ["required"]
         ]);
         $validated['password'] = Hash::make($validated['password']);
 
         User::create($validated);
-        $request->session()->flash('success', 'Sign Up successful! Please Login!');
-        return redirect('/');
+        $request->session()->flash('success', 'Daftar berhasil!, silahkan login.');
+        return redirect('/login');
     }
 }
