@@ -7,7 +7,7 @@
             @guest
                 <button onclick="location.href='/login'">Chat Dokter</button>
             @else
-                <button>Chat Dokter</button>
+                <button id="chatbtn">Chat Dokter</button>
             @endguest
         </div>
     </section>
