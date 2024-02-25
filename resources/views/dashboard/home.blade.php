@@ -11,4 +11,5 @@
             @endguest
         </div>
     </section>
+    <section class="top-info"></section>
 @endsection
