@@ -11,7 +11,7 @@ class RegisterController extends Controller
     public function indexReg()
     {
         return view('dashboard.register', [
-            "title" => "Daftar"
+            "title" => "Daftar - MediGuide"
         ]);
     }
 

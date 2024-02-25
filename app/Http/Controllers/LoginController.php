@@ -10,7 +10,7 @@ class LoginController extends Controller
     public function indexLog()
     {
         return view('dashboard.login', [
-            "title" => "Masuk"
+            "title" => "Masuk - MediGuide"
         ]);
     }
 
