@@ -18,4 +18,6 @@ Route::group(['middleware' => ['auth', 'checkRole:user, doctor']], function () {
 });
 Route::group(['middleware' => ['auth', 'checkRole:admin']], function () {
     Route::get('/dashboard', [DashboardController::class, 'admindashboard']);
+    Route::get('/articles', [DashboardController::class, 'adminArticles']);
+    Route::get('/users', [DashboardController::class, 'adminUsers']);
 });

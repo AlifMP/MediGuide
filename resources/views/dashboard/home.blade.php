@@ -6,36 +6,45 @@
             <h1 class="title">Selamat Datang di MediGuide!</h1>
             <p class="desc">Dapatkan panduan kesehatan terpercaya dan relevan untuk membimbing Anda melalui setiap langkah
                 hidup sehat.</p>
+            <button class="btn-more">Selengkapnya</button>
         </div>
-        <div class="home-card">
-            <div class="container">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Artikel Kesehatan</h2>
-                    </div>
-                    <div class="card-body">
-                        <p>Dapatkan informasi kesehatan terbaru dan terpercaya dari para ahli.</p>
-                        <a href="#" class="card-link">Baca Artikel ></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Chat dengan Dokter</h2>
-                    </div>
-                    <div class="card-body">
-                        <p>Konsultasikan masalah kesehatan Anda langsung dengan dokter kami.</p>
-                        <a href="#" class="card-link">Chat Sekarang ></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Riwayat Kesehatan</h2>
-                    </div>
-                    <div class="card-body">
-                        <p>Kelola riwayat kesehatan Anda dengan mudah dan aman.</p>
-                        <a href="#" class="card-link">Lihat Riwayat ></a>
-                    </div>
-                </div>
+    </section>
+    <section class="article" id="article">
+        <div class="article-content">
+            <div class="top">
+                <h1 class="title">Ikuti artikel & berita terkini</h1>
+                <button>Selengkapnya</button>
             </div>
+            <div class="article-list">
+                @foreach ($articles as $article)
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="{{ $article->img_info }}" alt="image-article">
+                        </div>
+                        <div class="article-text">
+                            <h4>{{ $article->title_info }}</h4>
+                            <p>{{ $article->desc_info }}</p>
+                        </div>
+                        <div class="timestamp">
+                            <p>{{ $article->created_at }}</p>
+                        </div>
+                        <div class="article-more"><button>Selengkapnya</button></div>
+                    </div>
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="{{ $article->img_info }}" alt="image-article">
+                        </div>
+                        <div class="article-text">
+                            <h4>{{ $article->title_info }}</h4>
+                            <p>{{ $article->desc_info }}</p>
+                        </div>
+                        <div class="timestamp">
+                            <p>{{ $article->created_at }}</p>
+                        </div>
+                        <div class="article-more"><button>Selengkapnya</button></div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
     </section>
 @endsection
