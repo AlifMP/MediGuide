@@ -20,4 +20,10 @@ Route::group(['middleware' => ['auth', 'checkRole:admin']], function () {
     Route::get('/dashboard', [DashboardController::class, 'admindashboard']);
     Route::get('/articles', [DashboardController::class, 'adminArticles']);
     Route::get('/users', [DashboardController::class, 'adminUsers']);
+    Route::get('/adduser', [DashboardController::class, 'addUsers']);
+    Route::get('/edit/user/{id}', [DashboardController::class, 'editUsers']);
+    Route::get('/delete/user/{id}', [DashboardController::class, 'deleteUsers']);
+    Route::post('/adduser', [DashboardController::class, 'addUsersPost']);
+    Route::post('/edit/user/{id}', [DashboardController::class, 'editUsersPut']);
+    Route::post('/delete/user/{id}', [DashboardController::class, 'deleteUsersDelete']);
 });

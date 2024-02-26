@@ -40,4 +40,13 @@ class DashboardController extends Controller
             'users' => $users
         ]);
     }
+    public function addUsers()
+    {
+        return view('dashboard.addUser', [
+            'title' => 'Add User - MediGuide',
+        ]);
+    }
+    public function addUsersPost()
+    {
+    }
 }
