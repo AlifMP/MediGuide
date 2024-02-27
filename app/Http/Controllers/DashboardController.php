@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Todolist;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class DashboardController extends Controller
 {
@@ -46,7 +47,14 @@ class DashboardController extends Controller
             'title' => 'Add User - MediGuide',
         ]);
     }
-    public function addUsersPost()
+    public function addUsersPost(Request $request)
     {
+        DB::table('users')->insert([
+            'name' => $request->name,
+            'email' => $request->email,
+            'role' => $request->role,
+            'password' => Hash::make($request->password),
+        ]);
+        return redirect('/users');
     }
 }

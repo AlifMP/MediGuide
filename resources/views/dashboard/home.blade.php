@@ -9,7 +9,7 @@
             <button class="btn-more">Selengkapnya</button>
         </div>
     </section>
-    <section class="article" id="article">
+    {{-- <section class="article" id="article">
         <div class="article-content">
             <div class="top">
                 <h1 class="title">Ikuti artikel & berita terkini</h1>
@@ -46,5 +46,5 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection
