@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+:root {
+    --cyan: #00ccff;
+    --lime: #00ffbb;
+    --blue-dark: #001b66;
+    --blue: #0044ff;
+    --faded-blue: #99b4ff;
+    --big-font: 4.7rem;
+    --h1-font: 2.1rem;
+    --h2-font: 1.9rem;
+    --h3-font: 1.7rem;
+    --h4-font: 1.4rem;
+    --p-font: 1.2rem;
+    --small-font: 1.1rem;
+    --border-nav: #00000036;
+}
+
+/* navbar */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    align-items: center;
+    padding: 20px 10%;
+    border-bottom: 1px solid var(--border-nav);
+    transition: all 0.65s ease;
+}
+header .logo-medic img {
+    width: 200px;
+}
+header.sticky {
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 12px 15%;
+}
+.navlist {
+    display: flex;
+}
+.navlist a {
+    color: var(--blue-dark);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 25px;
+    position: relative;
+    transition: all 0.45s ease;
+}
+.navlist a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 3px;
+    background-color: var(--blue);
+    transition: width 0.45s ease;
+}
+.navlist a:hover {
+    color: var(--blue);
+}
+.navlist a:hover::after {
+    width: 100%;
+}
+.btn-login {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 13px;
+    background-color: var(--blue);
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid var(--blue);
+    outline: none;
+    transition: all 0.45s ease;
+}
+.btn-login:hover {
+    background-color: #fff;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+}
+li .logout {
+    display: flex;
+    align-items: center;
+}
+.btn-logout {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 13px;
+    transition: all 0.3s ease-in-out;
+    color: var(--blue);
+    border-right: 1px solid #00000036;
+}
+.btn-logout:hover {
+    color: var(--blue-dark);
+    text-decoration: underline;
+}
+.pfp {
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+    pointer-events: none;
+}
+
+/* detail blog */
+span {
+    color: var(--blue-dark);
+}
+section {
+    padding: 150px 10% 40px;
+}
+/* left-side */
+.left-side {
+    float: left;
+    width: 20%;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+.left-side h3 {
+    font-size: var(--h3-font);
+}
+
+/* middle-side */
+.middle-side {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+.middle-side h1 {
+    font-size: var(--h1-font);
+}
+
+/* right-side */
+.right-side {
+    float: left;
+    width: 30%;
+    padding: 20px;
+}
+.right-side h3 {
+    font-size: var(--h3-font);
+}

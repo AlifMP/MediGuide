@@ -17,6 +17,7 @@
     --h1-font: 2.1rem;
     --h2-font: 1.9rem;
     --p-font: 1.2rem;
+    --border-nav: #00000036;
 }
 header {
     position: fixed;
@@ -29,12 +30,16 @@ header {
     background: transparent;
     align-items: center;
     padding: 20px 10%;
-    /* border-bottom: 1px solid #00000036; */
     transition: all 0.65s ease;
 }
 header .logo-medic img {
     width: 200px;
 }
+/* header.sticky {
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-nav);
+    padding: 12px 15%;
+} */
 .navlist {
     display: flex;
 }
@@ -77,6 +82,28 @@ header .logo-medic img {
     background-color: var(--blue);
     color: #fff;
     border: 2px solid #fff;
+}
+li .logout {
+    display: flex;
+    align-items: center;
+}
+.btn-logout {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 13px;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    border-right: 1px solid var(--faded-blue);
+}
+.btn-logout:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.pfp {
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+    pointer-events: none;
 }
 span {
     color: var(--blue-dark);

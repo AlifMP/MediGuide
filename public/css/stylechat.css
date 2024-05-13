@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    transition: all 0.65s ease;
+}
+:root {
+    --cyan: #00ccff;
+    --lime: #00ffbb;
+    --blue-dark: #001b66;
+    --blue: #0044ff;
+    --faded-blue: #99b4ff;
+    --big-font: 4.7rem;
+    --h1-font: 2.1rem;
+    --h2-font: 1.9rem;
+    --h3-font: 1.7rem;
+    --h4-font: 1.4rem;
+    --p-font: 1.2rem;
+    --small-font: 1.1rem;
+    --border-nav: #00000036;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    align-items: center;
+    padding: 20px 10%;
+    border-bottom: 1px solid var(--border-nav);
+    transition: all 0.65s ease;
+}
+header .logo-medic img {
+    width: 200px;
+}
+header.sticky {
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 12px 15%;
+}
+.navlist {
+    display: flex;
+}
+.navlist a {
+    color: var(--blue-dark);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 25px;
+    position: relative;
+    transition: all 0.45s ease;
+}
+.navlist a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 3px;
+    background-color: var(--blue);
+    transition: width 0.45s ease;
+}
+.navlist a:hover {
+    color: var(--blue);
+}
+.navlist a:hover::after {
+    width: 100%;
+}
+.btn-login {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 13px;
+    background-color: var(--blue);
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid var(--blue);
+    outline: none;
+    transition: all 0.45s ease;
+}
+.btn-login:hover {
+    background-color: #fff;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+}
+li .logout {
+    display: flex;
+    align-items: center;
+}
+.btn-logout {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 13px;
+    transition: all 0.3s ease-in-out;
+    color: var(--blue);
+    border-right: 1px solid #00000036;
+}
+.btn-logout:hover {
+    color: var(--blue-dark);
+    text-decoration: underline;
+}
+.pfp {
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+    pointer-events: none;
+}
+span {
+    color: var(--blue-dark);
+}
+section {
+    padding: 150px 27% 40px;
+}
+.contacts {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--blue-dark);
+}
+.contacts:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.contacts img {
+    max-width: 80px;
+    border-radius: 100%;
+    margin-right: 11px;
+}
+.contacts h3 {
+    font-size: 1.3rem;
+    color: var(--blue-dark);
+    font-weight: 500;
+}
+.contacts p {
+    font-size: 1rem;
+    color: var(--blue);
+    font-weight: 400;
+}
+.contact {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.contact img {
+    max-width: 80px;
+    border-radius: 100%;
+    margin-right: 11px;
+}
+.contact h3 {
+    font-size: 1.3rem;
+    color: var(--blue-dark);
+    font-weight: 500;
+}
+.contact p {
+    font-size: 1rem;
+    color: var(--blue);
+    font-weight: 400;
+}

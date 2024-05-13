@@ -6,6 +6,7 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
+    transition: all 0.45s ease;
 }
 :root {
     --cyan: #00ccff;
@@ -19,92 +20,16 @@
     --p-font: 1.1rem;
 }
 body {
-    background-color: #ddd;
-}
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    align-items: center;
-    padding: 10px 15%;
-    border-bottom: 1px solid #00000036;
-    transition: all 0.65s ease;
-}
-header .logo-medic img {
-    width: 230px;
-}
-.navlist {
-    display: flex;
-}
-.navlist a {
-    color: var(--blue-dark);
-    font-size: 18px;
-    font-weight: 500;
-    margin: 0 25px;
     position: relative;
-    transition: all 0.45s ease;
-}
-.navlist a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -7px;
-    width: 0;
-    height: 3px;
-    background-color: var(--blue);
-    transition: width 0.45s ease;
-}
-.navlist a:hover {
-    color: var(--blue);
-}
-.navlist a:hover::after {
+    background-image: url(../assets/bg-sign.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     width: 100%;
-}
-.btn-login {
-    font-size: 18px;
-    font-weight: 500;
-    padding: 13px;
-    background-color: var(--blue);
-    color: #fff;
-    border-radius: 8px;
-    border: 2px solid var(--blue);
-    outline: none;
-    transition: all 0.45s ease;
-}
-.btn-login:hover {
-    background-color: var(--faded-blue);
-    color: var(--blue-dark);
 }
 span {
     color: var(--blue-dark);
 }
-/* section {
-    padding: 160px 15% 50px;
-}
-.home {
-    position: relative;
-    height: 80vh;
-    width: 100%;
-    background-image: url(images/bg2.png);
-    background-size: cover;
-    background-position: center;
-    background-color: #ccc;
-    display: flex;
-    align-items: end;
-    justify-content: flex-start;
-}
-.home-content h1 {
-    font-size: var(--h1-font);
-    font-weight: 500;
-    list-style: 1.1;
-    margin: 0 0 8px;
-    width: 80%;
-} */
 section {
     display: flex;
     justify-content: center;
@@ -112,7 +37,10 @@ section {
     height: 100vh;
 }
 section .form-content {
-    padding: 2px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
 }
 section .form-content .title {
     font-size: var(--h1-font);
@@ -127,18 +55,22 @@ section .form-content .inputan {
 }
 section .form-content .inputan input {
     width: 100%;
-    border: none;
+    border: 1px solid var(--faded-blue);
+    border-radius: 8px;
     outline: none;
     font-size: 1rem;
     margin-top: 1px;
     height: 40px;
     padding: 8px;
 }
+section .form-content .inputan input:focus {
+    border: 1px solid var(--blue);
+}
 section .form-content button {
     width: 100%;
     margin-top: 10px;
     outline: none;
-    height: 40px;
+    height: 45px;
     border: 1px solid var(--blue);
     transition: all 0.45s ease;
     color: #fff;
@@ -146,10 +78,60 @@ section .form-content button {
     letter-spacing: 1px;
     cursor: pointer;
     border-radius: 8px;
-    margin-bottom: 5px;
-    font-size: 0.9rem;
+    margin-bottom: 8px;
+    font-size: var(--p-font);
 }
 section .form-content button:hover {
     background-color: var(--faded-blue);
     color: #000;
+}
+section #info {
+    font-size: var(--p-font);
+}
+section #info a {
+    color: var(--blue);
+}
+section #info a:hover {
+    color: var(--blue-dark);
+}
+section .back a {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    color: var(--blue);
+    font-size: var(--p-font);
+}
+section .back a i {
+    margin-right: 5px;
+    font-size: 1.3rem;
+}
+section .back a:hover {
+    color: var(--blue-dark);
+}
+.alertmsg .alertdanger {
+    background-color: red;
+    color: #fff;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    font-size: var(--p-font);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.alertmsg .alertsuccess {
+    background-color: rgb(0, 165, 0);
+    color: #fff;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    font-size: var(--p-font);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.invalid-feed {
+    color: red;
 }

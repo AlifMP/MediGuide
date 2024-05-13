@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('health_information', function (Blueprint $table) {
             $table->id('id_info');
-            $table->string('img_info');
+            $table->string('img_info')->default('article-default.png');
             $table->string('title_info');
             $table->string('desc_info', 9999);
             $table->string('slug_info');

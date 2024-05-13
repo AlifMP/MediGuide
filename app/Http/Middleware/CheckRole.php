@@ -27,7 +27,7 @@ class CheckRole
         if (Auth::user()->role == 'user') {
             return Redirect::to('/');
         } elseif (Auth::user()->role == 'doctor') {
-            return Redirect::to('/');
+            return Redirect::to('/dashboard/doctor');
         } elseif (Auth::user()->role == 'admin') {
             return Redirect::to('/dashboard');
         }

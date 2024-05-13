@@ -6,7 +6,13 @@
             <h1 class="title">Selamat Datang di MediGuide!</h1>
             <p class="desc">Dapatkan panduan kesehatan terpercaya dan relevan untuk membimbing Anda melalui setiap langkah
                 hidup sehat.</p>
-            <button class="btn-more">Selengkapnya</button>
+            @guest
+                <button class="btn-more" onclick="location.href='/login'">Selengkapnya</button>
+            @else
+                <button class="btn-more" onclick="location.href='/blogs'">Info Kesehatan</button>
+                <button class="btn-more" onclick="location.href='/chat'">Tanya Dokter</button>
+                <button class="btn-more" onclick="location.href='/profile'">Profil Kesehatan</button>
+            @endguest
         </div>
     </section>
     {{-- <section class="article" id="article">

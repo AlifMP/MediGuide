@@ -9,6 +9,11 @@
     @guest()
         <li><a href="/login" class="btn-login">Masuk / Daftar</a></li>
     @else
-        <li><a href="/logout" class="btn-logout">{{ auth()->user()->name }} | Logout</a></li>
+        <li>
+            <div class="logout">
+                <a href="/logout" class="btn-logout">{{ auth()->user()->name }}</a><img
+                    src="../assets/{{ auth()->user()->pfp }}" alt="profile_picture" class="pfp">
+            </div>
+        </li>
     @endguest
 </header>

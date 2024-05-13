@@ -40,13 +40,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-    public function collaboratedTodolists()
-    {
-        return $this->belongsToMany(Todolist::class, 'collaborate', 'user_id', 'todolist_id')->withTimestamps();
-    }
+    // public function collaboratedTodolists()
+    // {
+    //     return $this->belongsToMany(Todolist::class, 'collaborate', 'user_id', 'todolist_id')->withTimestamps();
+    // }
     public function isAdmin()
     {
         return $this->role == 'admin';
     }
-
 }
